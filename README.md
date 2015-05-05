@@ -34,7 +34,6 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 
 	1. open main.h and change the following : 
 ```#define TEST_MODE_SSID	(CHOOSE THE wifi name the computer is connected to)
-
    #define TEST_MODE_PASSWORD ( enter the password for the same wifi connection)
    #define TEST_MODE_WITHOUT_PROVISION
 ```
