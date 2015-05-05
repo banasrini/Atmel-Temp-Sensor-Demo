@@ -17,10 +17,11 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 **software**
 
 	1. Windows PC.
-	2. Install Atmel Studio 6.2
-	3. Install updates to Atmel Studio as suggested during installation 
-	4. Install terminal software like putty or teraterm (I have used putty)
-	5. Download the files from INSERT LINK TO DROPBOX HERE
+	2. Sign up for [PubNub](https://admin.pubnub.com/#/register?encryptedPassword=&last=&company=&phone=&email=&first=), and get a set of publish and subscribe keys. 
+	3. Install Atmel Studio 6.2
+	4. Install updates to Atmel Studio as suggested during installation 
+	5. Install terminal software like putty or teraterm (I have used putty)
+	6. Download the files from INSERT LINK TO DROPBOX HERE
 	
 ### Connecting the hardware to make sense
 
@@ -30,13 +31,15 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 	4. Connect SAMD21 XPRO to a free USB port on your PC (make sure no other USB port on your PC is in use)
 	5. Connect the power to the port that says “DEBUG USB”. 
 	
-### The Software
+### The Software (need to add images)
 
 	1. open main.h and change the following : 
-```#define TEST_MODE_SSID	(CHOOSE THE wifi name the computer is connected to)
-   #define TEST_MODE_PASSWORD ( enter the password for the same wifi connection)
+	
+```#define TEST_MODE_SSID	(choose THE wifi access point you want the chip to connect to)
+   #define TEST_MODE_PASSWORD (enter the password for the same wifi connection)
    #define TEST_MODE_WITHOUT_PROVISION
 ```
+	2. In main.c, add the channel name and pub, sub keys : 
 
 4. how to use PubNub or a UI to stream that data
 5. how to scale this
