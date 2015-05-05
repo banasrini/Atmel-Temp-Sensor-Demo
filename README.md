@@ -1,6 +1,6 @@
 ##Blog, How - To
 
-### what are we building
+
 In this blog, I will show you how to build a sophisticated but simple real time temperature and light sensor. Think of the possibilities; a weather reporter, a smart temperature monitor for your nursery or even your wine cellar.   
 
 For a while now, every time I think of IoT, I instantly think of the Raspberry Pi and Arduino. To be honest, when I knew I had to work with an Atmel chip, I was nervous. If only I knew it wont take me more than a couple hours. Yes, its that easy, and I am going to teach you exactly how to build a smart temperature sensor.
