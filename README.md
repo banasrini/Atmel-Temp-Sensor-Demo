@@ -17,6 +17,7 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
 	3. Atmel I/O1 Xplained Pro for sensor and SD-card input to host MCU
 	
 ![alt text](images/FullSizeRender.png)		
+
 **software**
 
 	1. Windows PC.
@@ -58,7 +59,7 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
 	6. If all is well, you should see a constant stream of messages in the following format : 
 	<Atmel_Pubnub> {"columns":[["temperature","55"]]}
 	
-	insert image here . 
+![alt text](images/fullsetup.png)	
 
 
 5. how to scale this
