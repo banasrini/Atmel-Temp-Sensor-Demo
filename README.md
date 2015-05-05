@@ -1,9 +1,12 @@
 ##Blog, How - To
 
 ### what are we building
-In this blog, I will show you how to build a sophisticated but simple real time temperature sensor. Think of the possibilities; a weather reporter, a smart temperature monitor for your nursery or even,..   
+In this blog, I will show you how to build a sophisticated but simple real time temperature and light sensor. Think of the possibilities; a weather reporter, a smart temperature monitor for your nursery or even your wine cellar.   
 
-For a while now, every time I think of IoT, I think of the Raspberry Pi and Arduino; nothing more, nothing less. To be honest, when I knew I had to work with an Atmel chip, I was nervous. If only I knew it wont take me more than a couple hours. Yes, its that easy, and I am going to teach you exactly how to build a smart temperature sensor.
+For a while now, every time I think of IoT, I instantly think of the Raspberry Pi and Arduino. To be honest, when I knew I had to work with an Atmel chip, I was nervous. If only I knew it wont take me more than a couple hours. Yes, its that easy, and I am going to teach you exactly how to build a smart temperature sensor.
+ 
+ 
+ <insert image of the UI built by Tomomi>
  
 
 ### what you will need
@@ -12,8 +15,8 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 	1. Atmel ATWINC1500 module mounted on ATWINC1500 Xplained Pro Extension
 	2. ATSAMD21-XPRO host MCU board for driving the ATWINC1500 Xplained Pro Extension
 	3. Atmel I/O1 Xplained Pro for sensor and SD-card input to host MCU
-	Insert images.
-		
+	
+![alt text](images/FullSizeRender.png)		
 **software**
 
 	1. Windows PC.
@@ -24,9 +27,14 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 	6. Download the files from INSERT LINK TO DROPBOX HERE.
 	7. Open the PubNub example solution file. 
 	
-### What you are building - the end product
+### What you are building
 
-![alt text](../images/demofunctionality)
+![alt text](images/demofunctionality.png)
+
+	1. The Atmel I/O1 Xplained Pro contains the temperature and light sensor. 
+	2. This is connecting to the wifi using the ATWINC1500 module which can talk to any device on the internet.
+	4. The PubNub code running on the Atmel chip enables us to publish the temperature and light information in real time to any one subscribing to the same channel.
+	5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
 ### Connecting the hardware to make sense
 
 	1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
