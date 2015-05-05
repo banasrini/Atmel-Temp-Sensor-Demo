@@ -17,12 +17,16 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 **software**
 
 	1. Windows PC.
-	2. Sign up for [PubNub](https://admin.pubnub.com/#/register?encryptedPassword=&last=&company=&phone=&email=&first=), and get a set of publish and subscribe keys. 
+	2. Sign up for [PubNub](https://www.pubnub.com), and get a set of publish and subscribe keys. 
 	3. Install Atmel Studio 6.2
 	4. Install updates to Atmel Studio as suggested during installation 
 	5. Install terminal software like putty or teraterm (I have used putty)
-	6. Download the files from INSERT LINK TO DROPBOX HERE
+	6. Download the files from INSERT LINK TO DROPBOX HERE.
+	7. Open the PubNub example solution file. 
 	
+### What you are building - the end product
+
+![alt text](../images/demofunctionality)
 ### Connecting the hardware to make sense
 
 	1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
@@ -33,18 +37,24 @@ For a while now, every time I think of IoT, I think of the Raspberry Pi and Ardu
 	
 ### The Software (need to add images)
 
-	1. open main.h and change the following : 
+	1. First, we will need to do a firmware update - details on firmware update. 
+	2. open main.h and change the following : 
 	
 ```#define TEST_MODE_SSID	(choose THE wifi access point you want the chip to connect to)
    #define TEST_MODE_PASSWORD (enter the password for the same wifi connection)
    #define TEST_MODE_WITHOUT_PROVISION
 ```
-	2. In main.c, add the channel name and pub, sub keys : 
+	3. In main.c, add the channel name and pub, sub keys. 
+	4. Build (F7 / Build -> build solution), run(continue/ green arrow/ F5/ debug -> continue).
+	5. Open [PubNub console] (http://www.pubnub.com/console/), use the same channel name and pub,sub keys as in the code and SUBSCRIBE. 
+	6. If all is well, you should see a constant stream of messages in the following format : 
+	<Atmel_Pubnub> {"columns":[["temperature","55"]]}
+	
+	insert image here . 
 
-4. how to use PubNub or a UI to stream that data
+
 5. how to scale this
 6. practical use cases
-7. what do yoiu needa to build tisdfh kfhj
 
 
 http://www.atmel.com/devices/atwinc1500.aspx?tab=documents - documentation for the hardware
