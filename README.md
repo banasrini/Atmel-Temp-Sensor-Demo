@@ -8,6 +8,16 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
  
  <insert image of the UI built by Tomomi>
  
+ 
+### What you are building
+
+![alt text](images/demofunctionality.png)
+
+	1. The Atmel I/O1 Xplained Pro contains the temperature and light sensor. 
+	2. This is connecting to the wifi using the ATWINC1500 module which can talk to any device on the internet.
+	4. The PubNub code running on the Atmel chip enables us to publish the temperature and light information in real time to any one subscribing to the same channel.
+	5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
+ 
 
 ### what you will need
 **hardware**
@@ -28,14 +38,7 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
 	6. Download the files from INSERT LINK TO DROPBOX HERE.
 	7. Open the PubNub example solution file. 
 	
-### What you are building
 
-![alt text](images/demofunctionality.png)
-
-	1. The Atmel I/O1 Xplained Pro contains the temperature and light sensor. 
-	2. This is connecting to the wifi using the ATWINC1500 module which can talk to any device on the internet.
-	4. The PubNub code running on the Atmel chip enables us to publish the temperature and light information in real time to any one subscribing to the same channel.
-	5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
 ### Connecting the hardware to make sense
 
 	1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
