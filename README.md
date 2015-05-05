@@ -16,7 +16,7 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
 	2. ATSAMD21-XPRO host MCU board for driving the ATWINC1500 Xplained Pro Extension
 	3. Atmel I/O1 Xplained Pro for sensor and SD-card input to host MCU
 	
-![alt text](images/FullSizeRender.png)		
+	
 
 **software**
 
@@ -43,6 +43,9 @@ For a while now, every time I think of IoT, I instantly think of the Raspberry P
 	3. Connect OLED1 XPRO board to SAMD21 XPRO connector EXT3
 	4. Connect SAMD21 XPRO to a free USB port on your PC (make sure no other USB port on your PC is in use)
 	5. Connect the power to the port that says “DEBUG USB”. 
+	
+	
+![alt text](images/FullSizeRender.png)	
 	
 ### The Software (need to add images)
 
