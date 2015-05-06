@@ -1,9 +1,10 @@
 ##Blog, How - To
+ 
 
+The buzzword being IoT, we wanted to build something that everyone can easily understand and build themselves, and of course include both hardware and software. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to build, that is viable and easily scalable.
 
-In this blog, I will show you how to build a sophisticated but simple real time temperature and light sensor. Think of the possibilities; a weather reporter, a smart temperature monitor for your nursery or even your wine cellar.   
-
-For a while now, every time I think of IoT, I instantly think of the Raspberry Pi and Arduino. To be honest, when I knew I had to work with an Atmel chip, I was nervous. If only I knew it wont take me more than a couple hours. Yes, its that easy, and I am going to teach you exactly how to build a smart temperature sensor.
+The Atmel temperature sensor enables monitoring the temperature from anywhere in the world at low-latency, and provide updates in realtime whenever the temperature changes. 
+The temperature sensor will measure the ambient temperature and publish it as a data stream to a channel in the PubNub network. A web browser that subscribes to this channel displays the data stream. 
  
  
  <insert image of the UI built by Tomomi>
