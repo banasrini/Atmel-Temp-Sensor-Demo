@@ -69,8 +69,14 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 #define TEST_MODE_PASSWORD "Enter-the password-for-the-SSID" (enter the password for the same Wi-Fi connection)
 #define TEST_MODE_WITHOUT_PROVISION
 ```
+
 3. In main.c, add the channel name and pub, sub keys. 
+
+![alt text](images/channel.png)	
+
 4. Build (F7 / Build -> build solution), run(continue/ green arrow/ F5/ debug -> continue).
+![alt text](images/build.png)	
+
 5. Open [PubNub console] (http://www.pubnub.com/console/), use the same channel name and pub,sub keys as in the code and SUBSCRIBE. 
 6. If all is well, you should see a constant stream of messages in the following format : 
 	<Atmel_Pubnub> {"columns":[["temperature","55"]]}
