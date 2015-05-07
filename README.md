@@ -43,7 +43,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 **A prerequisite is that you upgrade the firmware for SAMD21 using the [.bat](src/samd21_xplained_pro_firmware_update.bat) file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code.**
 
 
-###2. Connecting the hardware in the right way : 
+###2. Connecting the hardware, the right way : 
 
 1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
 2. Connect I/O1 XPRO board to SAMD21 XPRO connector EXT2
