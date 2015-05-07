@@ -52,7 +52,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 5. Connect the power to the port that says “DEBUG USB”
 	
 	
-![alt text](images/FullSizeRender.png)	
+![alt text](images/atmel.png)	
 	
 ###3. The Software 
 
