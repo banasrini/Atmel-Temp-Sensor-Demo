@@ -61,9 +61,11 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 	
 ### The Software (need to add images)
 
-1. Open the PubNub example solution on Atmel Studio and open main.h.
+1. Open the PubNub example [solution](pubnubAtmel/PubNub_EXAMPLE.atsln) on Atmel Studio and you will see the following page. Make sure you choose the debugger/programmer and interface as shown: 
 
-2. Include the following lines: 
+![alt text](images/opening.png)	
+
+2. Include the following lines in src/main.h: 
 	
 ```
 #define TEST_MODE_SSID "Enter-your-SSID"	(choose THE Wi-Fi access point you want the chip to connect to)
@@ -71,7 +73,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 #define TEST_MODE_WITHOUT_PROVISION
 ```
 
-3. In main.c, add the channel name and pub, sub keys. 
+3. In src/main.c, add the channel name and pub, sub keys. 
 
 ![alt text](images/channel.png)	
 
