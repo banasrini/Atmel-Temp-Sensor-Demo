@@ -3,10 +3,6 @@
 
 The buzzword being IoT, we wanted to build something that everyone can easily understand and build themselves, and of course include both hardware and software. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to build, that is viable and easily scalable. We decided on combining Atmel MCU and PubNub to build a real time temperature sensor demo. 
 
-
- 
- 
- <insert image/gif of the UI built by Tomomi>
  
  
 ## What you are building
@@ -47,7 +43,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 6. Download the files from INSERT LINK TO DROPBOX HERE.
 7. Open the PubNub example solution file. 
 
-** A prerequisite is that you upgrade the firmware for SAMD21 using the .bat file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code. **
+** A prerequisite is that you upgrade the firmware for SAMD21 using the [.bat](src/samd21_xplained_pro_firmware_update.bat) file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code. **
 
 
 ### Connecting the hardware in the right way : 
@@ -67,7 +63,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 
 ![alt text](images/opening.png)	
 
-2. Include the following lines in src/main.h: 
+2. Include the following lines in pubnubAtmel/src/main.h: 
 	
 ```
 #define TEST_MODE_SSID "Enter-your-SSID"	(choose THE Wi-Fi access point you want the chip to connect to)
@@ -75,7 +71,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 #define TEST_MODE_WITHOUT_PROVISION
 ```
 
-3. In src/main.c, add the channel name and pub, sub keys. 
+3. In pubnubAtmel/src/main.c, add the channel name and pub, sub keys. 
 
 ![alt text](images/channel.png)	
 
@@ -90,9 +86,9 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 
 ### Visualizing the data stream
 
-[](link to TOmomi's UI)
 
-Tomomi (ADD A LINK TO HER BIO), built this extremely pretty visual for the demo. It mocks nursery or greenhouse monitor(a very typical use case of using temperature sensors), instead of just displaying raw data off the sensor. This interface is running on a browser. The technology behind is quite simple, using [PubNub JavaScript APIs](https://www.pubnub.com/docs/javascript/javascript-sdk.html) to subscribe the data sent from the Atmel chip.
+
+Tomomi (ADD A LINK TO HER BIO), built the live demo for this and can be seen here : [Atmel Xplained Pro Demo](http://pubnub.github.io/atmel-temperature-demo/). It mocks nursery or greenhouse monitor(a very typical use case of using temperature sensors), instead of just displaying raw data off the sensor. This interface is running on a browser. The technology behind is quite simple, using [PubNub JavaScript APIs](https://www.pubnub.com/docs/javascript/javascript-sdk.html) to subscribe the data sent from the Atmel chip.
 
 This interface is accessible from anywhere in the world with any devices- mobile phones, tablets, and any smart devices, as long as you have a web browser.
 The main purpose behind this is to present information in most efficient manner without losing its accuracy.
