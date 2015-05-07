@@ -1,4 +1,4 @@
-#Atmel Xplained Pro Temperature Sensor Demo
+#PubNub - Atmel Xplained Pro Real Time Temperature Sensor 
  
 
 The buzzword being IoT, we wanted to build something with software and hardware(duhhh!),that everyone can easily understand and try themselves. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to understand, easy to use and also scalable. We decided on combining Atmel MCU and PubNub to build a real time temperature sensor demo. 
