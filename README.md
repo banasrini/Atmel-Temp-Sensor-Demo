@@ -3,6 +3,7 @@
 
 The buzzword being IoT, we wanted to build something with software and hardware(duhhh!),that everyone can easily understand and try themselves. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to understand, easy to use and also scalable. We decided on combining Atmel MCU and PubNub to build a real time temperature sensor demo. 
 
+VIDEO GOES HERE 
  
 ## What exactly is this, and what does it do?
 
@@ -86,9 +87,9 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 
 ADD LINK TO THE GIF HERE. - http://g.recordit.co/jHPBFcm6zr.gif
 
-Tomomi (ADD A LINK TO HER BIO), built the live demo for this and can be seen here : [Atmel Xplained Pro Demo](http://pubnub.github.io/atmel-temperature-demo/). It mocks nursery or greenhouse monitor(a very typical use case of using temperature sensors), instead of just displaying raw data off the sensor. This interface is running on a browser. The technology behind is quite simple, using [PubNub JavaScript APIs](https://www.pubnub.com/docs/javascript/javascript-sdk.html) to subscribe the data sent from the Atmel chip.
+Tomomi (ADD A LINK TO HER BIO), built a live demo for this and can be seen here : [Atmel Xplained Pro Demo](http://pubnub.github.io/atmel-temperature-demo/). It mocks nursery or greenhouse monitor(a very typical use case of using temperature sensors), instead of just displaying raw data off the sensor. This interface is running on a browser. The technology behind is quite simple, using [PubNub JavaScript APIs](https://www.pubnub.com/docs/javascript/javascript-sdk.html) to subscribe the data sent from the Atmel chip.
 
-This interface is accessible from anywhere in the world with any devices- mobile phones, tablets, and any smart devices, as long as you have a web browser.
+This interface is accessible from anywhere in the world with any kind of device - mobile phones, tablets, and any smart device, as long as you have a web browser.
 The main purpose behind this is to present information in most efficient manner without losing its accuracy.
 
 In this scenario, the UI shows the current temperature, also a simple line graph, updating in **real time** so that you can tell the relative changes of the temperature, raising and dropping.
@@ -97,10 +98,12 @@ This particular data is simple, but when you have multiple, more complicated dat
 
 
 
-### Time to conquer the world using IoT
+### Go Conquer IoT
 
-This demo is read-only and just reads the ambient temperature, but in reality, you want to develop solid products that lets your users monitor *and* control, i.e, **bidirectional communication** between devices. For instance, if you have a smart A/C, not only monitoring the current room temperature, but you need to make it controllable from a remote devices. With the power of [PubNub APIs](https://www.pubnub.com/developers/), you can achieve this with no hassle. 
+This demo is read-only and reads the ambient temperature, but in reality, you want to develop  products that lets your users monitor *and* control, i.e, **bidirectional communication** between devices. For instance, if you have a smart A/C, not only monitoring the current room temperature, but you need to make it controllable from a remote devices. With the power of [PubNub APIs](https://www.pubnub.com/developers/), you can achieve this with no hassle. 
 I hope I am leaving you guys with enough excitement to try this demo out, and also build cooler ones. Let me know at @bhavana1110. 
+
+
 
 
 
