@@ -62,6 +62,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 ### The Software (need to add images)
 
 1. Open the PubNub example solution on Atmel Studio and open main.h.
+
 2. Include the following lines: 
 	
 ```
