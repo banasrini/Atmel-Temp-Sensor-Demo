@@ -27,12 +27,14 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 ### What do you need
 
 ####**Hardware**
+
+![alt text](images/components.png)	
 	
-1. **ATWINC1500** module. This is a Wi-Fi black box that contains the Wi-Fi stack, the TCP stack and the TLS stack.
-2. **ATSAMD21-XPRO** host MCU board. 
+
+1. **ATSAMD21-XPRO** host MCU board.
+2. **OLED 1 Xplained pro** to provide the display on the chip.  
 3. Atmel **I/O1 Xplained Pro** for sensor and SD-card input to host MCU
-4. **OLED 1 Xplained pro** to provide the display on the chip. 
-	
+4. **ATWINC1500** module. This is a Wi-Fi black box that contains the Wi-Fi stack, the TCP stack and the TLS stack.
 	
 
 ####**Software**
