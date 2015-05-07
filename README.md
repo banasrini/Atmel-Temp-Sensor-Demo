@@ -41,7 +41,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 4. Install updates to Atmel Studio as suggested during installation 
 5. Install terminal software like putty or teraterm (I have used putty)
 
-**A prerequisite is that you upgrade the firmware for SAMD21 using the [.bat](src/samd21_xplained_pro_firmware_update.bat) file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code.**
+**A prerequisite is that you upgrade the firmware for SAMD21 using the [.bat](code/FirwareUpgrade/samd21_xplained_pro_firmware_update.bat) file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code.**
 
 
 ###2. Connecting the hardware, the right way : 
@@ -57,11 +57,11 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 	
 ###3. The Software 
 
-3.1 Open the PubNub example [solution](pubnubAtmel/PubNub_EXAMPLE.atsln) on Atmel Studio and you will see the following page. Make sure you choose the debugger/programmer and interface as shown: 
+3.1 Open the PubNub example [solution](code/pubnubAtmelExample/PubNub_EXAMPLE.atsln) on Atmel Studio and you will see the following page. Make sure you choose the debugger/programmer and interface as shown: 
 
 ![alt text](images/opening.png)	
 
-3.2  Include the following lines in pubnubAtmel/src/main.h: 
+3.2  Include the following lines in code/pubnubAtmel/src/main.h: 
 	
 ```
 #define TEST_MODE_SSID "Enter-your-SSID"	(choose THE Wi-Fi access point you want the chip to connect to)
@@ -69,7 +69,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 #define TEST_MODE_WITHOUT_PROVISION
 ```
 
-3.3 In pubnubAtmel/src/main.c, add the channel name and pub, sub keys. 
+3.3 In code/pubnubAtmel/src/main.c, add the channel name and pub, sub keys. 
 
 ![alt text](images/channel.png)	
 
