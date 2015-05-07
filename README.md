@@ -1,20 +1,24 @@
-##Blog, How - To
+#Blog, How - To
  
 
 The buzzword being IoT, we wanted to build something that everyone can easily understand and build themselves, and of course include both hardware and software. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to build, that is viable and easily scalable.
 
-The Atmel temperature sensor enables monitoring the temperature from anywhere in the world at low-latency, and provide updates in realtime whenever the temperature changes. 
+
+ 
+ 
+ <insert image/gif of the UI built by Tomomi>
+ 
+ 
+## What you are building
+
+The Atmel temperature sensor enables monitoring temperature from anywhere in the world at low-latency, and provide updates in realtime whenever the temperature changes. 
 The temperature sensor will measure the ambient temperature and publish it as a data stream to a channel in the PubNub network. A web browser that subscribes to this channel displays the data stream. 
- 
- 
- <insert image of the UI built by Tomomi>
- 
- 
-### What you are building
+
+### The concept : 
 
 ![alt text](images/demofunctionality.png)
 
-1. The Atmel I/O1 Xplained Pro contains the temperature and light sensor. 
+1. We are using the Atmel I/O1 Xplained Pro sensor that measures the temperature. 
 2. This is connecting to the wifi using the ATWINC1500 module which can talk to any device on the internet.
 4. The PubNub code running on the Atmel chip enables us to publish the temperature and light information in real time to any one subscribing to the same channel.
 5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
@@ -40,7 +44,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 7. Open the PubNub example solution file. 
 	
 
-### Connecting the hardware to make sense
+### Connecting the hardware so it works
 
 1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
 2. Connect IO1 XPRO board to SAMD21 XPRO connector EXT2
@@ -56,9 +60,10 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 1. First, we will need to do a firmware update - details on firmware update. 
 2. open main.h and change the following : 
 	
-```#define TEST_MODE_SSID	(choose THE wifi access point you want the chip to connect to)
-   #define TEST_MODE_PASSWORD (enter the password for the same wifi connection)
-   #define TEST_MODE_WITHOUT_PROVISION
+```
+#define TEST_MODE_SSID	(choose THE wifi access point you want the chip to connect to)
+#define TEST_MODE_PASSWORD (enter the password for the same wifi connection)
+#define TEST_MODE_WITHOUT_PROVISION
 ```
 3. In main.c, add the channel name and pub, sub keys. 
 4. Build (F7 / Build -> build solution), run(continue/ green arrow/ F5/ debug -> continue).
@@ -69,7 +74,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 ![alt text](images/fullsetup.png)	
 
 
-5. how to scale this
+7. Open (link to tomomis demo) to view the data stream on abeautiful real time chart. 
 6. practical use cases
 
 
