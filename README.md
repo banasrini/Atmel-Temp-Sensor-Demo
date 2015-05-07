@@ -86,7 +86,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 
 ###4. Visualizing the data stream
 
-
+ADD LINK TO THE GIF HERE. 
 
 Tomomi (ADD A LINK TO HER BIO), built the live demo for this and can be seen here : [Atmel Xplained Pro Demo](http://pubnub.github.io/atmel-temperature-demo/). It mocks nursery or greenhouse monitor(a very typical use case of using temperature sensors), instead of just displaying raw data off the sensor. This interface is running on a browser. The technology behind is quite simple, using [PubNub JavaScript APIs](https://www.pubnub.com/docs/javascript/javascript-sdk.html) to subscribe the data sent from the Atmel chip.
 
