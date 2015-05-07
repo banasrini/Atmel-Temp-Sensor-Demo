@@ -1,4 +1,4 @@
-#Blog, How - To
+#Atmel Xplained Pro Temperature Sensor Demo
  
 
 The buzzword being IoT, we wanted to build something that everyone can easily understand and build themselves, and of course include both hardware and software. The first thing that came to our mind was the Raspberry Pi and the Arduino, but we wanted to try out something different. Something that is easy to build, that is viable and easily scalable. We decided on combining Atmel MCU and PubNub to build a real time temperature sensor demo. 
@@ -20,9 +20,9 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 4. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
  
 
-### What do you need
+### 1. What do you need
 
-####**Hardware**
+####1.1 **Hardware**
 
 ![alt text](images/components.png)	
 	
@@ -33,7 +33,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 4. **ATWINC1500** module. This is a Wi-Fi black box that contains the Wi-Fi stack, the TCP stack and the TLS stack.
 	
 
-####**Software**
+####1.2 **Software**
 
 1. Windows PC.
 2. Sign up for [PubNub](https://www.pubnub.com), and get a set of publish and subscribe keys. 
@@ -46,7 +46,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 ** A prerequisite is that you upgrade the firmware for SAMD21 using the [.bat](src/samd21_xplained_pro_firmware_update.bat) file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code. **
 
 
-### Connecting the hardware in the right way : 
+###2. Connecting the hardware in the right way : 
 
 1. Connect WINC1500 XPRO board to SAMD21 XPRO connector EXT1
 2. Connect IO1 XPRO board to SAMD21 XPRO connector EXT2
@@ -57,13 +57,13 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 	
 ![alt text](images/FullSizeRender.png)	
 	
-### The Software (need to add images)
+###3. The Software 
 
-1. Open the PubNub example [solution](pubnubAtmel/PubNub_EXAMPLE.atsln) on Atmel Studio and you will see the following page. Make sure you choose the debugger/programmer and interface as shown: 
+3.1 Open the PubNub example [solution](pubnubAtmel/PubNub_EXAMPLE.atsln) on Atmel Studio and you will see the following page. Make sure you choose the debugger/programmer and interface as shown: 
 
 ![alt text](images/opening.png)	
 
-2. Include the following lines in pubnubAtmel/src/main.h: 
+3.2  Include the following lines in pubnubAtmel/src/main.h: 
 	
 ```
 #define TEST_MODE_SSID "Enter-your-SSID"	(choose THE Wi-Fi access point you want the chip to connect to)
@@ -71,20 +71,20 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 #define TEST_MODE_WITHOUT_PROVISION
 ```
 
-3. In pubnubAtmel/src/main.c, add the channel name and pub, sub keys. 
+3.3 In pubnubAtmel/src/main.c, add the channel name and pub, sub keys. 
 
 ![alt text](images/channel.png)	
 
-4. Build (F7 / Build -> build solution), run(continue/ green arrow/ F5/ debug -> continue).
+3.4 Build (F7 / Build -> build solution), run(continue/ green arrow/ F5/ debug -> continue).
 ![alt text](images/build.png)	
 
-5. Open [PubNub console] (http://www.pubnub.com/console/), use the same channel name and pub,sub keys as in the code and SUBSCRIBE. 
-6. If all is well, you should see a constant stream of messages in the following format : 
-	<Atmel_Pubnub> {"columns":[["temperature","55"]]}
+3.5 Open [PubNub console] (http://www.pubnub.com/console/), use the **same channel name and pub,sub keys** as in the code and SUBSCRIBE. 
+3.6 If all is well, you should see a constant stream of messages in the following format :                  
+	      <Atmel_Pubnub> {"columns":[["temperature","55"]]}
 	
 ![alt text](images/fullsetup.png)	
 
-### Visualizing the data stream
+###4. Visualizing the data stream
 
 
 
@@ -99,9 +99,9 @@ This particular data is simple, but when you have multiple, more complicated dat
 
 
 
-### Final note 
+### Time to conquer the world using IoT
 
-This demo is read-only, but in reality, you want to develop solid products that lets your users monitor *and* control, i.e, **bidirectional communication** between devices. For instance, if you have a smart A/C, not only monitoring the current room temperature, but you need to make it controllable from a remote devices. With the power of [PubNub APIs](https://www.pubnub.com/developers/), you can achieve this with no hassle. 
+This demo is read-only and just reads the ambient temperature, but in reality, you want to develop solid products that lets your users monitor *and* control, i.e, **bidirectional communication** between devices. For instance, if you have a smart A/C, not only monitoring the current room temperature, but you need to make it controllable from a remote devices. With the power of [PubNub APIs](https://www.pubnub.com/developers/), you can achieve this with no hassle. 
 I hope I am leaving you guys with enough excitement to try this demo out, and also build cooler ones. Let me know at @bhavana1110. 
 
 
