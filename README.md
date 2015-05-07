@@ -45,7 +45,7 @@ The temperature sensor will measure the ambient temperature and publish it as a 
 6. Download the files from INSERT LINK TO DROPBOX HERE.
 7. Open the PubNub example solution file. 
 
-** A prerequisite is that you upgrade the firmware for SAMD21 using the .bat file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. **
+** A prerequisite is that you upgrade the firmware for SAMD21 using the .bat file provided with the PubNub Atmel example before you run this demo. Make sure no other software like putty or teraterm is using the com port). Close atmel  studio and the putty terminal. The firmware upgrade is successful if you see a PASS sign on the terminal after running the code. **
 
 
 ### Connecting the hardware in the right way : 
